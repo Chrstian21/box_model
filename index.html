@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,15 +8,34 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
     }
 
+
+    nav {
+      background: #333;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+   
     .box {
       width: 200px;
       height: 200px;
       display: inline-block;
       vertical-align: top;
     }
-
 
     .box1 {
       background: red;
@@ -23,7 +44,6 @@
       margin: 0;
     }
 
- 
     .box2 {
       background: yellow;
       border-top: 20px solid black;
@@ -33,23 +53,49 @@
       margin: 0;
     }
 
-  
     .box3 {
       background: lightblue;
       border: 10px solid black;
       margin: 0;
     }
 
-    
     .container {
       display: flex;
       flex-wrap: wrap;
-      width: 420px; 
+      width: 420px;
+      margin: 20px auto;
+    }
+
+   
+    .about {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+      border-left: 5px solid #333;
+      border-radius: 5px;
+    }
+
+    .about h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .about p {
+      line-height: 1.6;
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+  </nav>
+
+  
+  <div id="home" class="container">
     <div class="box box1"></div>
     <div class="box box3">
       <p>
@@ -58,5 +104,12 @@
     </div>
     <div class="box box2"></div>
   </div>
+
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+   
+  </section>
 </body>
 </html>
+
